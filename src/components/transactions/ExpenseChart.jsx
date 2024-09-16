@@ -18,9 +18,17 @@ const totalExpense = transactions.filter(transaction => transaction.amount <0)
 const totalExpensesPercentaje = Math.round((totalExpense/totalInconme)*100);
 const totalIncomePercentage = 100 - totalExpensesPercentaje;
 
-
+if (totalInconme === 0) {
   return (
-    <VictoryPie
+    <VictoryPie 
+    colorScale={["#27272A"]}
+    data={[{ x: "", y: 100 }]}
+    labels={() => null} // Ocultar etiquetas
+  />
+  )
+}
+  return (
+    <VictoryPie 
       colorScale={["#e74c3c", "#2ecc71"]}
       data={[
         { x: "Expenses", y: totalExpensesPercentaje },

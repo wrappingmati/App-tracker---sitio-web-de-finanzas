@@ -11,7 +11,7 @@ function Balance() {
     <div className="flex justify-between mb-4">
      
       <h3 className="font-semibold text-2xl ">Tu balance</h3>
-      <h1 className="text-2xl font-semibold">${total}</h1>
+      <h1 className="text-2xl font-semibold ">${total}</h1>
     </div>
   );
 }
